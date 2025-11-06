@@ -121,13 +121,7 @@ fun MusicApp(viewModel: MusicViewModel, onDominantColorChange: (Color) -> Unit) 
                     playerSize = playerSize,
                     dominantColor = trackDominantColor,
                     progressColor = trackProgressColor,
-                    onTogglePlayerSize = {
-                        playerSize = when(playerSize) {
-                            PlayerSize.Full -> PlayerSize.Medium
-                            PlayerSize.Medium -> PlayerSize.Mini
-                            PlayerSize.Mini -> PlayerSize.Full
-                        }
-                    },
+                    onPlayerSizeChange = { newSize -> playerSize = newSize },
                     onPlayPauseClick = { viewModel.togglePlayPause() },
                     onNextClick = { viewModel.nextTrack() },
                     onPrevClick = { viewModel.prevTrack() },
