@@ -32,7 +32,6 @@
             </intent-filter>
         </activity>
 
-        <!-- Добавлена новая активность -->
         <activity
             android:name=".TrackDetailActivity"
             android:parentActivityName=".MainActivity"
